@@ -4,6 +4,10 @@ const fs = require("fs");
 const path = require("path");
 const app = express();
 const PORT = 8080;
+const cors = require("cors");
+
+// Allow cors
+app.use(cors()); 
 
 // Load categories data
 const categoriesData = JSON.parse(
